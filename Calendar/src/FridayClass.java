@@ -3,7 +3,7 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Main {
+public class FridayClass {
     public static void main(String[] args) throws IOException {
         int year, month, k = 0, i = 0;
         for(;;){
