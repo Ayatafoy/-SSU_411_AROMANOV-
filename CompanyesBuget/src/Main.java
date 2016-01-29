@@ -109,9 +109,9 @@ public class Main {
                 map.replace(checkingAccount,
                         new Pair(companyName, Integer.toString(budget + Integer.parseInt(rows.get(i)[4]))));
             } else
-                log.info("Остаток средств на счете компании " + companyName + ": " + budget +
-                        "\n Попытка отправить " + Integer.parseInt(rows.get(i)[4]) + " рублей" +
-                        "компании " + map.get(rows.get(i)[3]).first);
+                log.info("The balance in the account of the company " + companyName + ": " + budget +
+                        "\n An attempt to send " + Integer.parseInt(rows.get(i)[4]) + " rubles" +
+                        "the company " + map.get(rows.get(i)[3]).first);
         }
         ArrayList<String[]> result = new ArrayList<>();
         for (HashMap.Entry<String, Pair> entry : map.entrySet())
@@ -119,7 +119,7 @@ public class Main {
                     "\n"});
         File f = new File(dir + "\\" + "Result.csv");
         FileWriter out = new FileWriter(f);
-        out.write("Название компании;Расчетный счет;Бюджет\n");
+        out.write("Company Name;Current Account;Budget\n");
         for (int i = 0; i < result.size(); i++)
             out.write(result.get(i)[0]);
         out.close();
